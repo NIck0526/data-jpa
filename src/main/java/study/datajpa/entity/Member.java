@@ -11,7 +11,7 @@ import javax.persistence.*;
 @ToString(of = {"id", "username", "age"})
 @NamedQuery(name = "Member.findByUsername", query = "select m from Member m where m.username = :username")
 @NamedEntityGraph(name = "Member.all", attributeNodes = @NamedAttributeNode("team"))
-public class Member {
+public class Member extends BaseEntity {
 
     @Id
     @GeneratedValue
